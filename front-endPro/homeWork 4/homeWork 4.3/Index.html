@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="js_icon.ico" type="image/x-icon" />
+    <title>Home work 4.3</title>
+  </head>
+  <body>
+    <script>
+      let yearOfBirth = prompt("Вкажіть ваш рік народження:");
+      if (yearOfBirth === null) {
+        alert("Шкода, що Ви не захотіли ввести свій рік народження.");
+      } else {
+        let city = prompt("Вкажіть місто, в якому ви живете:");
+        if (city === null) {
+          alert("Шкода, що Ви не захотіли ввести своє місто.");
+        } else {
+          let sport = prompt("Вкажіть ваш улюблений вид спорту:");
+          if (sport === null) {
+            alert("Шкода, що Ви не захотіли ввести свій улюблений вид спорту.");
+          } else {
+            const currentYear = new Date().getFullYear();
+            let age = currentYear - yearOfBirth;
+
+            let cityMessage;
+            switch (city.toLowerCase()) {
+              case "київ":
+                cityMessage = "Ти живеш у столиці України!";
+                break;
+              case "лондон":
+                cityMessage = "Ти живеш у столиці Великобританії!";
+                break;
+              case "вашингтон":
+                cityMessage = "Ти живеш у столиці США!";
+                break;
+              default:
+                cityMessage = `Ти живеш у місті ${city}.`;
+            }
+
+            let sportMessage;
+            switch (sport.toLowerCase()) {
+              case "футбол":
+                sportMessage = "Круто! Хочеш стати Ліонелем Мессі?";
+                break;
+              case "баскетбол":
+                sportMessage = "Круто! Хочеш стати Майклом Джорданом?";
+                break;
+              case "бокс":
+                sportMessage = "Круто! Хочеш стати Олександром Усиком?";
+                break;
+              default:
+                sportMessage = `Ваш улюблений вид спорту: ${sport}.`;
+            }
+            alert(`Вік: ${age}\n${cityMessage}\n${sportMessage}`);
+          }
+        }
+      }
+    </script>
+  </body>
+</html>

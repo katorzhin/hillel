@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <base href="../../" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="images/js_icon.ico" type="image/x-icon" />
+    <title>Home work 5.4</title>
+  </head>
+  <body>
+    <script>
+      const number = parseInt(prompt("Enter an integer:"));
+
+      let isPrime = true;
+
+      if (isNaN(number)) {
+        alert("Please enter a valid number.");
+      } else if (number <= 1) {
+        alert(number + " is not a prime number.");
+      } else {
+        for (let i = 2; i <= Math.sqrt(number); i++) {
+          if (number % i === 0) {
+            isPrime = false;
+            break;
+          }
+        }
+        alert(
+          number + (isPrime ? " is a prime number." : " is not a prime number.")
+        );
+      }
+    </script>
+  </body>
+</html>

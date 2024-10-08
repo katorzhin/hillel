@@ -9,20 +9,20 @@
   </head>
   <body>
     <script>
-      let yearOfBirth = prompt("Вкажіть ваш рік народження:");
-      if (yearOfBirth === null) {
+      const yearOfBirth = prompt("Вкажіть ваш рік народження:");
+      if (!yearOfBirth) {
         alert("Шкода, що Ви не захотіли ввести свій рік народження.");
       } else {
-        let city = prompt("Вкажіть місто, в якому ви живете:");
-        if (city === null) {
+        const city = prompt("Вкажіть місто, в якому ви живете:");
+        if (!city) {
           alert("Шкода, що Ви не захотіли ввести своє місто.");
         } else {
-          let sport = prompt("Вкажіть ваш улюблений вид спорту:");
-          if (sport === null) {
+          const sport = prompt("Вкажіть ваш улюблений вид спорту:");
+          if (!sport) {
             alert("Шкода, що Ви не захотіли ввести свій улюблений вид спорту.");
           } else {
             const currentYear = new Date().getFullYear();
-            let age = currentYear - yearOfBirth;
+            const age = currentYear - yearOfBirth;
 
             let cityMessage;
             switch (city.toLowerCase()) {
@@ -53,6 +53,7 @@
               default:
                 sportMessage = `Ваш улюблений вид спорту: ${sport}.`;
             }
+
             alert(`Вік: ${age}\n${cityMessage}\n${sportMessage}`);
           }
         }

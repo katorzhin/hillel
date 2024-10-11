@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <base href="../../" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="images/js_icon.ico" type="image/x-icon" />
+    <title>Home work 6.1</title>
+  </head>
+  <body>
+    <script>
+      function removeChars(inputString, charsToRemove) {
+        for (let characterToRemove of charsToRemove) {
+          inputString = inputString.split(characterToRemove).join("");
+        }
+        return inputString;
+      }
+
+      const userInput = prompt("Enter a string:");
+      const chars = prompt(
+        "Enter characters to remove, separated by commas:"
+      ).split(","); 
+
+      alert(removeChars(userInput, chars));
+    </script>
+  </body>
+</html>

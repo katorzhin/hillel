@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <base href="../../" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="images/js_icon.ico" type="image/x-icon" />
+    <title>Home work 7.1</title>
+  </head>
+  <body>
+    <script>
+      function sum() {
+        let total = 0;
+
+        return function (value) {
+          total += value;
+          return total;
+        };
+      }
+
+      const accumulate = sum();
+
+      console.log(accumulate(4));
+      console.log(accumulate(6));
+      console.log(accumulate(10));
+      console.log(accumulate(7));
+    </script>
+  </body>
+</html>

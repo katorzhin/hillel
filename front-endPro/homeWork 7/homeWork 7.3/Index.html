@@ -13,14 +13,12 @@
         let userInput;
 
         for (let i = 0; i < 10; i++) {
-          userInput = prompt("Enter a number greater than 100:");
+          userInput = +prompt("Enter a number greater than 100:");
 
           if (userInput === null) {
             console.log("User canceled input.");
             return;
           }
-
-          userInput = Number(userInput);
 
           if (userInput > 100) {
             console.log(`User entered: ${userInput}`);
@@ -30,7 +28,7 @@
 
         console.log(`Last entered value: ${userInput}`);
       }
-      
+
       askForNumber();
     </script>
   </body>

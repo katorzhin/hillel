@@ -1,0 +1,15 @@
+#image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+  }
+  
+  #random-image {
+    max-width: 500px;
+    max-height: 500px;
+    border: 2px solid #333;
+    border-radius: 10px;
+  }
+  

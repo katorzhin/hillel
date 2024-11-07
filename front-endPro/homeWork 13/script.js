@@ -1,54 +1,74 @@
 const form = document.querySelector('form');
 
+function validateField(input) {
+    switch (input.name) {
+        case "name":
+            if (input.value.trim() === '') {
+                showError(input, 'Name is required');
+            } else {
+                clearError(input);
+            }
+            break;
+
+        case "message":
+            if (input.value.trim().length < 5) {
+                showError(input, 'Message must be at least 5 characters');
+            } else {
+                clearError(input);
+            }
+            break;
+
+        case "tel":
+            const phonePattern = /^\+380\d{9}$/;
+            if (!phonePattern.test(input.value.trim())) {
+                showError(input, 'Phone number must start with +380 and contain 12 digits');
+            } else {
+                clearError(input);
+            }
+            break;
+
+        case "e-mail":
+            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailPattern.test(input.value.trim())) {
+                showError(input, 'Email must contain "@" and a domain (e.g., example@domain.com)');
+            } else {
+                clearError(input);
+            }
+            break;
+
+        default:
+            break;
+    }
+}
+
 form.addEventListener('submit', event => {
-    event.preventDefault();
-
-    const nameInput = form.querySelector('input[name="name"]');
-    const messageInput = form.querySelector('textarea[name="message"]');
-    const phoneInput = form.querySelector('input[name="tel"]');
-    const emailInput = form.querySelector('input[name="e-mail"]');
-
     let isValid = true;
-
-    form.querySelectorAll('.error-message').forEach(error => error.remove());
-
-    if (nameInput.value.trim() === '') {
-        showError(nameInput, 'Name is required');
-        isValid = false;
-    }
-
-    if (messageInput.value.trim().length < 5) {
-        showError(messageInput, 'Message must be at least 5 characters');
-        isValid = false;
-    }
-
-    const phonePattern = /^\+380\d{9}$/;
-    if (!phonePattern.test(phoneInput.value.trim())) {
-        showError(phoneInput, 'Phone number must start with +380 and contain 12 digits');
-        isValid = false;
-    }
-
-    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailPattern.test(emailInput.value.trim())) {
-        showError(emailInput, 'Email must contain "@" and a domain (e.g., example@domain.com)');
-        isValid = false;
-    }
-
-    if (isValid) {
-        const formData = new FormData(event.target);
-        const formObj = {};
-
-        formData.forEach((value, key) => formObj[key] = value);
-        console.log(formObj);
+    form.querySelectorAll('input, textarea').forEach(input => {
+        validateField(input);
+        if (input.parentElement.querySelector('.error-message')) {
+            isValid = false;
+        }
+    });
+    if (!isValid) {
+        event.preventDefault();
     }
 });
 
+form.addEventListener('input', event => {
+    validateField(event.target);
+});
+
 function showError(input, message) {
+    clearError(input);
     const error = document.createElement('div');
     error.className = 'error-message';
-    error.style.color = 'red';
-    error.style.fontSize = '12px';
-    error.style.marginTop = '5px';
     error.textContent = message;
     input.parentElement.appendChild(error);
+}
+
+function clearError(input) {
+    const existingError = input.parentElement.querySelector('.error-message');
+    if (existingError) {
+        existingError.remove();
+    }
 }

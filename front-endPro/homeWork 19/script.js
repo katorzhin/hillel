@@ -1,4 +1,4 @@
-const apiKey = '27be72fc78cb2c2e3a5443d6f8aff09c';
+const apiKey = 'apiKey';
 
 const cities = [
     {name: 'Kharkiv', lat: 49.990003265735936, lon: 36.2305059331285},

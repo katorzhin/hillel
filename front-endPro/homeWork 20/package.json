@@ -1,0 +1,12 @@
+{
+  "name": "hillel_home_work",
+  "version": "1.0.0",
+  "description": "This is repository for home work.",
+  "main": "index.js",
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^5.3.3",
+    "jquery": "^3.7.1"
+  }
+}

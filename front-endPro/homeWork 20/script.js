@@ -8,7 +8,7 @@ $(document).ready(function () {
         const taskText = $taskInput.val().trim();
 
         if (!taskText) {
-            alert('Введите задачу!');
+            alert('Please enter the task!');
             return;
         }
 
@@ -28,7 +28,7 @@ $(document).ready(function () {
 
         const $deleteButton = $('<button>')
             .addClass('btn btn-danger btn-sm todo-item__delete')
-            .text('Видалити')
+            .text('Delete')
             .on('click', function () {
                 $taskItem.remove();
             });

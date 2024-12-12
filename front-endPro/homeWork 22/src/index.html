@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home work 22.1</title>
+    <link rel="shortcut icon" href="../../images/js_icon.ico" type="image/x-icon"/>
+    <link rel="stylesheet" href="main.scss">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+</head>
+<body class="d-flex justify-content-center align-items-center" style="height: 100vh; background-color: #66deb2;">
+
+<div class="container">
+    <h1 class="text-center">ToDoList</h1>
+    <form class="form js--form mb-3 d-flex">
+        <input type="text" name="task" required class="form__input js--form__input form-control me-2"
+               placeholder="Enter a new task">
+        <button type="button" id="add-task" class="btn btn-success">Add</button>
+    </form>
+    <ul id="todo-list" class="js--todos-wrapper list-group"></ul>
+</div>
+
+<div class="modal fade" id="taskModal" tabindex="-1" aria-labelledby="taskModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="taskModalLabel">Your Task</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p id="task-text"></p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="../node_modules/jquery/dist/jquery.min.js"></script>
+<script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+<script src="index.js"></script>
+<!--<script src="../dist/index.js"></script>-->
+</body>
+</html>

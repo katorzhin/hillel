@@ -1,0 +1,21 @@
+.emoji-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+    cursor: pointer;
+}
+
+.emoji-item {
+    text-align: center;
+}
+
+.emoji {
+    font-size: 2rem;
+    display: block;
+}
+
+.votes {
+    margin-top: 5px;
+    font-size: 1.2rem;
+}

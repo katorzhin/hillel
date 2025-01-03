@@ -1,0 +1,52 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.header {
+    background-color: #282c34;
+    padding: 20px;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav {
+    display: flex;
+    gap: 15px;
+}
+
+.nav-link {
+    color: white;
+    text-decoration: none;
+}
+
+.nav-link.active-link {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.todo-list {
+    text-align: center;
+    padding: 20px;
+}
+
+.todo-list input {
+    padding: 10px;
+    margin-right: 10px;
+}
+
+.todo-list button {
+    padding: 10px;
+}
+
+.footer {
+    background-color: #282c34;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}

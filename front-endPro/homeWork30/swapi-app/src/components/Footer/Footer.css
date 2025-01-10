@@ -1,0 +1,17 @@
+.footer {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.clear-button {
+    padding: 10px 20px;
+    background-color: #ff4d4f;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.clear-button:hover {
+    background-color: #d9363e;
+}

@@ -54,7 +54,9 @@ function ItemsList() {
                             <span className="item-text" onClick={() => handleToggle(todo)}>{todo.text}</span>
                             <div className="buttons">
                                 <button className="edit-button" onClick={() => handleEditStart(todo)}>Edit</button>
-                                <button className="delete-button" onClick={() => handleDelete(todo.id)}>Delete</button>
+                                <button className="delete-button" data-testid="delete-btn"
+                                        onClick={() => handleDelete(todo.id)}>Delete
+                                </button>
                             </div>
                         </>
                     )}

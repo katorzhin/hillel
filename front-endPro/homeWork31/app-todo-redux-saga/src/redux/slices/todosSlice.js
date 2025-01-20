@@ -43,8 +43,8 @@ const todosSlice = createSlice({
         },
         deleteTodoSuccess: (state, action) => {
             state.loading = false;
-            const id = action.payload;
-            state.items = state.items.filter((item) => item.id !== id);
+            const id = Number(action.payload);
+            state.items = state.items.filter(item => Number(item.id) !== id);
         },
         deleteTodoFailure: (state, action) => {
             state.loading = false;

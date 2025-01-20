@@ -1,0 +1,32 @@
+.home-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 6px;
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.home-container h1 {
+    margin-bottom: 10px;
+}
+
+.home-container h2 {
+    margin-bottom: 20px;
+    color: #555;
+}
+
+.home-container p {
+    line-height: 1.6;
+}
+
+.home-container ul {
+    margin-top: 10px;
+    padding-left: 20px;
+}
+
+.home-container h2,
+.home-container h3,
+.home-summary {
+    margin-top: 20px;
+}

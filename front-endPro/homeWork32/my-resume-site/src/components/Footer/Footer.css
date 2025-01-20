@@ -1,0 +1,11 @@
+.footer {
+    background-color: #333;
+    color: #eee;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.footer-contacts {
+    font-size: 0.9rem;
+    margin-top: 4px;
+}

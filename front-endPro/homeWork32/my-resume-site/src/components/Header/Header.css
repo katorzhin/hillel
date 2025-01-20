@@ -1,0 +1,26 @@
+.header-appbar {
+    background-color: #1976d2;
+}
+
+.header-toolbar {
+    display: flex;
+    justify-content: space-between;
+}
+
+.header-logo {
+    font-weight: bold;
+}
+
+.nav-links {
+    display: flex;
+    gap: 10px;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+.nav-link:hover {
+    opacity: 0.8;
+}

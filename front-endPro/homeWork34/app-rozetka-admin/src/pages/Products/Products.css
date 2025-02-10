@@ -1,0 +1,70 @@
+.products-page {
+    display: flex;
+    flex-direction: row;
+    min-height: 100vh;
+    color: #fff;
+}
+
+.left-panel {
+    width: 200px;
+    padding: 20px;
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+.rozetka-logo-small {
+    width: 250px;
+}
+
+button.MuiButton-root.MuiButton-contained.preview-btn,
+button.MuiButton-root.MuiButton-contained.add-product-btn {
+
+    background-color: #fff;
+    color: #37b249;
+
+    border: 1px solid #37b249;
+    border-radius: 6px;
+
+    box-shadow: none;
+
+
+    font-weight: 600;
+    text-transform: none;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 12px;
+}
+
+button.MuiButton-root.MuiButton-contained.preview-btn .icon,
+button.MuiButton-root.MuiButton-contained.add-product-btn .icon {
+    color: #37b249;
+    font-size: 1.2rem;
+}
+
+.main-content {
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.products-title {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.add-product-btn-wrapper {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 20px;
+}
+
+.table-wrapper {
+    max-width: 900px;
+    margin: 0 auto;
+}
